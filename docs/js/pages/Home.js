@@ -6,7 +6,7 @@ import TagsControl from '../components/TagsControl';
 
 const transition = transitions.scaleDown;
 
-
+// json からフォントの情報を取得する
 const ldtztw_fonts = jsonData.fonts.绿斗堂字体网;
 const qtw_fonts = jsonData.fonts.千图网;
 const zzw_fonts = jsonData.fonts.找字网;
@@ -28,11 +28,51 @@ export default class Home extends Component {
   shuffleItems = () => {
     console.log("button");
   }
-  changedRTLItems = (checked) => {
-    console.log(checked,"RTL");
+
+  changedFreeItems = (checked) => {
+    console.log(checked,"Free");
   }
-  changedTestItems = (checked) => {
-    console.log(checked,"Test");
+  changedChargeItems = (checked) => {
+    console.log(checked,"Charge");
+  }
+  changedSimplifiedCharactersItems = (checked) => {
+    console.log(checked,"SimplifiedCharacters");
+  }
+  changedTraditionalCharactersItems = (checked) => {
+    console.log(checked,"TraditionalCharacters");
+  }
+  changedHiraganaItems = (checked) => {
+    console.log(checked,"Hiragana");
+  }
+  changedElegantItems = (checked) => {
+    console.log(checked,"Elegant");
+  }
+  changedCheerfulItems = (checked) => {
+    console.log(checked,"Cheerful");
+  }
+  changedSquareStyleItems = (checked) => {
+    console.log(checked,"SquareStyle");
+  }
+  changedHandwritingItems = (checked) => {
+    console.log(checked,"Handwriting");
+  }
+  changedBeautifulItems = (checked) => {
+    console.log(checked,"Beautiful");
+  }
+  changedSeriousItems = (checked) => {
+    console.log(checked,"Serious");
+  }
+  changedCuteItems = (checked) => {
+    console.log(checked,"Cute");
+  }
+  changedNostalgicItems = (checked) => {
+    console.log(checked,"Nostalgic");
+  }
+  changedMingItems = (checked) => {
+    console.log(checked,"Ming");
+  }
+  changedGothicItems = (checked) => {
+    console.log(checked,"Gothic");
   }
 
   render() {
@@ -40,8 +80,21 @@ export default class Home extends Component {
       <div>
         <TagsControl
           onShuffle={this.shuffleItems}
-          onRTLChange={this.changedRTLItems}
-          onTestChange={this.changedTestItems}
+          onFreeChange={this.changedFreeItems}
+          onChargeChange={this.changedChargeItems}
+          onSimplifiedCharactersChange={this.changedSimplifiedCharactersItems}
+          onTraditionalCharactersChange={this.changedTraditionalCharactersItems}
+          onHiraganaChange={this.changedHiraganaItems}
+          onElegantChange={this.changedElegantItems}
+          onCheerfulChange={this.changedCheerfulItems}
+          onSquareStyleChange={this.changedSquareStyleItems}
+          onHandwritingChange={this.changedHandwritingItems}
+          onBeautifulChange={this.changedBeautifulItems}
+          onSeriousChange={this.changedSeriousItems}
+          onCuteChange={this.changedCuteItems}
+          onNostalgicChange={this.changedNostalgicItems}
+          onMingChange={this.changedMingItems}
+          onGothicChange={this.changedGothicItems}
         />
         <StackGrid
           monitorImagesLoaded
