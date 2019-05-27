@@ -1,7 +1,7 @@
 '''
 このスクリプトはフォントの画像を取得するスクレイピングをする
 pyenv shell 3.5.0 2.7.14
-python imgesNmaeGetter.py
+python imges_name_getter.py
 '''
 import json
 import requests
