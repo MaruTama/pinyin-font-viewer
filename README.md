@@ -1,3 +1,40 @@
+
+```bash
+$ cd /your/project/dir
+$ git clone https://github.com/tsuyoshiwada/react-stack-grid.git
+```
+
+Install some dependencies.
+
+```bash
+$ npm install
+```
+
+Start the development and can you see demo page (access to the `http://localhost:3000/`).
+
+```bash
+$ npm start
+```
+
+Run lint and testing.
+
+```bash
+$ npm test
+```
+
+Generates build file.
+
+```bash
+$ npm run build
+```
+
+RealWorls.js を書き換えた
+
+
+
+
+
+
 # react-stack-grid
 
 [![Build Status](http://img.shields.io/travis/tsuyoshiwada/react-stack-grid.svg?style=flat-square)](https://travis-ci.org/tsuyoshiwada/react-stack-grid)
@@ -244,10 +281,10 @@ import StackGrid from 'react-stack-grid';
 
 class YourComponent extends Component {
   render() {
-    const { 
-      size: { 
+    const {
+      size: {
         width
-      } 
+      }
     } = this.props;
 
     return (

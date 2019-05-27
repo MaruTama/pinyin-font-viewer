@@ -239,14 +239,22 @@ button:focus {
 /* Image */
 .image {
   display: block;
+  width:		100%;
   margin: 0;
 }
-
+/* https://blog.raizzenet.com/show-text-on-top-of-the-image/ */
 .image figcaption {
-  display: block;
-  margin: .2em 0 0;
-  font-weight: normal;
+  width:		100%;
+	font-size:	100%;
+	text-align:	center;
+	bottom:		4;
+	margin:		0;
+	padding:	0;
+	color:		#fff;
+	background:	rgba(0,0,0,0.4); /* 帯の透明度 */
+	position:	absolute; /* 絶対位置指定 */
 }
+
 
 
 @media (max-width: 580px) {
