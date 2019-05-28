@@ -12,74 +12,168 @@ const qtw_fonts = jsonData.fonts.千图网;
 const zzw_fonts = jsonData.fonts.找字网;
 const etc_fonts = jsonData.fonts.etc;
 // 結合する
-let images = ldtztw_fonts.concat(qtw_fonts, zzw_fonts, etc_fonts);
-console.log(images);
+const fonts = ldtztw_fonts.concat(qtw_fonts, zzw_fonts, etc_fonts);
+// console.log(fonts);
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
 
-    // set方法
     this.state={
-      x: 0,
+      fonts: fonts,
+      is_tags: { "free": true,
+              "charge": true,
+              "simplified_characters": true,
+              "traditional_characters": true,
+              "hiragana": true,
+              "elegant": true,
+              "cheerful": true,
+              "square_style": true,
+              "handwriting": true,
+              "beautiful": true,
+              "serious": true,
+              "cute": true,
+              "nostalgic": true,
+              "ming": true,
+              "gothic": true }
     };
-    // this.setState({x: 1});
-  }
-  shuffleItems = () => {
-    console.log("button");
   }
 
+
+  // ボタンが押されたときのコールバック
+  // OR 検索
+  orSearchItems = () => {
+    console.log("or button");
+    let matchedFonts = [];
+
+    // チェックされているタグのリストを作成する
+    const is_checked_tags = Object.keys(this.state.is_tags).filter( (key) => {
+      return this.state.is_tags[key] === true
+    });
+
+    // 参考リンク
+    // JavaScript配列操作速度比較 -for vs each vs jQuery-
+    // https://qiita.com/yukiB/items/dd74cb8ebcfb5babe874
+    // 配列同士で重複する値があるか確認する
+    // https://www.dkrk-blog.net/javascript/duplicate_an_array
+    // filterで一致する要素があるか検索する。
+    fonts.forEach(font => {
+      // 検索条件 のタグのすべてが フォントの tags に含まれるとき
+      // 重複する要素を取り出す
+      const duplicate_tags = [...font["tags"], ...is_checked_tags].filter(item => font["tags"].includes(item) && is_checked_tags.includes(item));
+      if(duplicate_tags.length > 0){
+        console.log(font);
+        matchedFonts.push(font);
+      }
+    });
+    this.setState({fonts: matchedFonts});
+  }
+  // AND 検索 
+  andSearchItems = () => {
+    console.log("and button");
+    let matchedFonts = [];
+
+    // チェックされているタグのリストを作成する
+    const is_checked_tags = Object.keys(this.state.is_tags).filter( (key) => {
+      return this.state.is_tags[key] === true
+    });
+    // AND 検索
+    fonts.forEach(font => {
+      // filterで一致する要素があるか検索する。
+      // 検索条件 のタグのすべてが フォントの tags に含まれるとき
+      // 重複する要素を取り出す。同じ値が2つずつ重複して出てくるので一意にする
+      const duplicate_tags = [...font["tags"], ...is_checked_tags].filter(item => font["tags"].includes(item) && is_checked_tags.includes(item));
+      if([...new Set(duplicate_tags)].length === is_checked_tags.length){
+        console.log(font);
+        matchedFonts.push(font);
+      }
+    });
+    this.setState({fonts: matchedFonts});
+  }
+  // チェックボタンが選択されたときのコールバック
   changedFreeItems = (checked) => {
-    console.log(checked,"Free");
+    // ネストになってるので、一度辞書ごと取り出して、要素を入れ替える。
+    let new_state = this.state.is_tags;
+    new_state.free = checked;
+    this.setState({is_tags: new_state});
   }
   changedChargeItems = (checked) => {
-    console.log(checked,"Charge");
+    let new_state = this.state.is_tags;
+    new_state.charge = checked;
+    this.setState({is_tags: new_state});
   }
   changedSimplifiedCharactersItems = (checked) => {
-    console.log(checked,"SimplifiedCharacters");
+    let new_state = this.state.is_tags;
+    new_state.simplified_characters = checked;
+    this.setState({is_tags: new_state});
   }
   changedTraditionalCharactersItems = (checked) => {
-    console.log(checked,"TraditionalCharacters");
+    let new_state = this.state.is_tags;
+    new_state.traditional_characters = checked;
+    this.setState({is_tags: new_state});
   }
   changedHiraganaItems = (checked) => {
-    console.log(checked,"Hiragana");
+    let new_state = this.state.is_tags;
+    new_state.hiragana = checked;
+    this.setState({is_tags: new_state});
   }
   changedElegantItems = (checked) => {
-    console.log(checked,"Elegant");
+    let new_state = this.state.is_tags;
+    new_state.elegant = checked;
+    this.setState({is_tags: new_state});
   }
   changedCheerfulItems = (checked) => {
-    console.log(checked,"Cheerful");
+    let new_state = this.state.is_tags;
+    new_state.cheerful = checked;
+    this.setState({is_tags: new_state});
   }
   changedSquareStyleItems = (checked) => {
-    console.log(checked,"SquareStyle");
+    let new_state = this.state.is_tags;
+    new_state.square_style = checked;
+    this.setState({is_tags: new_state});
   }
   changedHandwritingItems = (checked) => {
-    console.log(checked,"Handwriting");
+    let new_state = this.state.is_tags;
+    new_state.handwriting = checked;
+    this.setState({is_tags: new_state});
   }
   changedBeautifulItems = (checked) => {
-    console.log(checked,"Beautiful");
+    let new_state = this.state.is_tags;
+    new_state.beautiful = checked;
+    this.setState({is_tags: new_state});
   }
   changedSeriousItems = (checked) => {
-    console.log(checked,"Serious");
+    let new_state = this.state.is_tags;
+    new_state.serious = checked;
+    this.setState({is_tags: new_state});
   }
   changedCuteItems = (checked) => {
-    console.log(checked,"Cute");
+    let new_state = this.state.is_tags;
+    new_state.cute = checked;
+    this.setState({is_tags: new_state});
   }
   changedNostalgicItems = (checked) => {
-    console.log(checked,"Nostalgic");
+    let new_state = this.state.is_tags;
+    new_state.nostalgic = checked;
+    this.setState({is_tags: new_state});
   }
   changedMingItems = (checked) => {
-    console.log(checked,"Ming");
+    let new_state = this.state.is_tags;
+    new_state.ming = checked;
+    this.setState({is_tags: new_state});
   }
   changedGothicItems = (checked) => {
-    console.log(checked,"Gothic");
+    let new_state = this.state.is_tags;
+    new_state.gothic = checked;
+    this.setState({is_tags: new_state});
   }
 
   render() {
     return (
       <div>
         <TagsControl
-          onShuffle={this.shuffleItems}
+          onOrSearch={this.orSearchItems}
+          onAndSearch={this.andSearchItems}
           onFreeChange={this.changedFreeItems}
           onChargeChange={this.changedChargeItems}
           onSimplifiedCharactersChange={this.changedSimplifiedCharactersItems}
@@ -110,7 +204,7 @@ export default class Home extends Component {
           entered={transition.entered}
           leaved={transition.leaved}
         >
-          {images.map(obj => (
+          {this.state.fonts.map(obj => (
             <figure
               key={"./images/" + obj.src}
               className="image"

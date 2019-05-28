@@ -7,8 +7,11 @@ import { easings, transitions } from '../../../src/';
 
 export default class TagsControl extends Component {
   // ボタン
-  handleShuffle = () => {
-    this.props.onShuffle();
+  handleOrSearch = () => {
+    this.props.onOrSearch();
+  }
+  handleAndSearch = () => {
+    this.props.onAndSearch();
   }
 
   // チェックボタン
@@ -80,9 +83,6 @@ export default class TagsControl extends Component {
     return (
       <div className="tags-control">
         <div>
-          <button className="btn" onClick={this.handleShuffle}>Shuffle</button>
-        </div>
-        <div>
           <label>免费</label>
           <input type="checkbox" checked={free} onClick={this.handleFreeChange} defaultChecked/>
         </div>
@@ -141,6 +141,13 @@ export default class TagsControl extends Component {
         <div>
           <label>ゴシック</label>
           <input type="checkbox" checked={gothic} onClick={this.handleGothicChange} defaultChecked/>
+        </div>
+
+        <div>
+          <button className="btn" onClick={this.handleOrSearch}>OR検索</button>
+        </div>
+        <div>
+          <button className="btn" onClick={this.handleAndSearch}>AND検索</button>
         </div>
       </div>
     );
