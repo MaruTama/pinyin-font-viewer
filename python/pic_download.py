@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+
+'''
+このスクリプトは画像URLから画像を取得する
+'''
 import os
 import json
 import requests

@@ -117,6 +117,24 @@ button:focus {
   color: #ecc60b;
 }
 
+/* Page */
+.page {
+  width: 80%;
+  text-align: center;
+  background: #EEEEEE;
+  margin: auto;
+  padding: 1em 2em;
+}
+
+.page h1 {
+  font-size: 40px;
+  text-align: left;
+}
+
+.page p {
+  font-size: 16px;
+  text-align: left;
+}
 
 /* Button */
 .btn {

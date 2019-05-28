@@ -9,7 +9,7 @@ const Header = () => (
     <nav>
       <ul>
         <li><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
-        <li><Link to="/horizontal/" activeClassName="is-active">Horizontal</Link></li>
+        <li><Link to="/recommendation/" activeClassName="is-active">Recommended combination for Japanese</Link></li>
       </ul>
     </nav>
   </header>
