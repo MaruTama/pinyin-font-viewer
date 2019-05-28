@@ -96,7 +96,7 @@ button:focus {
 .header nav {
   position: fixed;
   top: 30px;
-  left: 210px;
+  left: 0px;
   z-index: 1000;
 }
 
