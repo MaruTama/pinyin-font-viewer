@@ -136,6 +136,11 @@ button:focus {
   text-align: left;
 }
 
+.page ul {
+  font-size: 16px;
+  text-align: left;
+}ul
+
 /* Button */
 .btn {
   display: inline-block;

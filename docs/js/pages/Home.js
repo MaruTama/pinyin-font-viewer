@@ -21,6 +21,7 @@ export default class Home extends Component {
 
     this.state={
       fonts: fonts,
+      // bool型の配列っていいのかな、、、？
       is_tags: { "free": true,
               "charge": true,
               "simplified_characters": true,
@@ -68,7 +69,7 @@ export default class Home extends Component {
     });
     this.setState({fonts: matchedFonts});
   }
-  // AND 検索 
+  // AND 検索
   andSearchItems = () => {
     console.log("and button");
     let matchedFonts = [];

@@ -2,19 +2,19 @@
   "fonts": {
     "etc": [{
       "img_link": "http://pic.downcc.com/upload/2017-7/15006964426705854.png",
-      "tags": ["simplified_characters"],
+      "tags": ["free","simplified_characters"],
       "url": "http://m.downcc.com/d/298524",
       "src": "15006964426705854.png",
       "name": "义启仿宋体拼音版"
     }, {
       "img_link": "http://pic.downcc.com/upload/2017-11/15120037076528013.png",
-      "tags": ["simplified_characters"],
+      "tags": ["free","simplified_characters"],
       "url": "http://m.downcc.com/d/333066",
       "src": "15120037076528013.png",
       "name": "方正拼音字库"
     }, {
       "img_link": "http://pic.downcc.com/upload/2018-1/15164222636273954.jpg",
-      "tags": ["simplified_characters"],
+      "tags": ["free","simplified_characters"],
       "url": "http://m.downcc.com/d/350429",
       "src": "15164222636273954.jpg",
       "name": "汉仪拼音体字体"
@@ -261,7 +261,7 @@
       "name": "Aa偷偷喜欢你拼音体"
     }, {
       "img_link": "http://m.lvdoutang.com/uploadfile/2019/0227/20190227143538469.jpg",
-      "tags": ["free", "serious", "elegant", "handwriting", "simplified_characters"],
+      "tags": ["free", "serious", "elegant", "handwriting", "simplified_characters", "nostalgic"],
       "url": "http://m.lvdoutang.com/show/3229.html",
       "src": "20190227143538469.jpg",
       "name": "方正小篆拼音体"
@@ -730,7 +730,7 @@
       "name": "淘气马丁学拼音"
     }, {
       "img_link": "https://pic.qiantucdn.com/font/32/82/22/40W58PICM7bGqjVxFsfpJ_PIC2018.jpg!qt780",
-      "tags": ["free", "serious", "cheerful", "square_style", "simplified_characters", "hiragana"],
+      "tags": ["free", "serious", "cheerful", "square_style", "simplified_characters", "hiragana", "nostalgic"],
       "url": "https://www.58pic.com/newpic/32822240.html",
       "src": "40W58PICM7bGqjVxFsfpJ_PIC2018.jpg",
       "name": "Q版古风拼音体-风格一致版"
@@ -965,7 +965,7 @@
       "name": "小鬼当家拼音体"
     }, {
       "img_link": "http://www.zhaozi.cn/d/file/2014pic/fonttitle30524988.png",
-      "tags": ["charge","simplified_characters"],
+      "tags": ["charge","simplified_characters", "nostalgic"],
       "url": "http://www.zhaozi.cn/html/fonts/china/yinpin/2018-12-04/24988.html",
       "src": "fonttitle30524988.png",
       "name": "Q版古风拼音体"
