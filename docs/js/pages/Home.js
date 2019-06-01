@@ -9,10 +9,12 @@ const transition = transitions.scaleDown;
 // json からフォントの情報を取得する
 const ldtztw_fonts = jsonData.fonts.绿斗堂字体网;
 const qtw_fonts = jsonData.fonts.千图网;
+const ztxz_fonts = jsonData.fonts.字体下载;
+const ztjz_fonts = jsonData.fonts.字体视界;
 const zzw_fonts = jsonData.fonts.找字网;
 const etc_fonts = jsonData.fonts.etc;
 // 結合する
-const fonts = ldtztw_fonts.concat(qtw_fonts, zzw_fonts, etc_fonts);
+const fonts = ldtztw_fonts.concat(qtw_fonts, ztxz_fonts, ztjz_fonts, zzw_fonts, etc_fonts);
 // console.log(fonts);
 
 export default class Home extends Component {
