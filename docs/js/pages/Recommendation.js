@@ -46,7 +46,7 @@ Close()`
 # パラメータ
 # Aa氧气少女拼音体
 yangqi  = "aayangqishaonvpyt.ttf"
-# 英椎行書 (Scale x=75% y=85%, Move x=0 y=-140)
+# 英椎行書
 acgyosyo = "acgyosyo.ttf"
 acgyosyo_s = "acgyosyo_small.ttf"
 
@@ -200,9 +200,10 @@ Close()
 
         <p>拼音フォントと日本語フォントの組み合わせを個人的に考えてみました。<br />
         「かわいい手書き」「かっこいい手書き」「楷体（明朝系）」「黑体（角ゴシック体）」「篆書体」の 5 種類です。<br />
+        <a href="https://fontforge.github.io/en-US/"> fontforge </a> というフォントの編集ツールをインストールしてください。
         ※細かな文字詰めはしていないのでご了承下さい。</p>
 
-        <p>以下のコマンドで実行</p>
+        <p>スクリプトを<b> build.pe </b>として保存後、以下のコマンドで実行すると、合成されます。</p>
         <Code
           codeString={codeExe}
           language="shell"
@@ -240,7 +241,7 @@ Close()
         <p>&nbsp;</p>
         <h1>楷体（明朝系）</h1>
         <p><img class="font-img" src="./images/font_sample2.png" alt="义启粗楷体拼音版+华文楷体+AR StdKaiSHYL1 Md (文鼎拼音字型)" /></p>
-        <p>ピンインの雰囲気違うけど、これが一番近い. 有料フォントがあるので年間1900円</p>
+        <p>ピンインの雰囲気違うけど、これが一番近い. <b>有料フォントがあるので年間1900円</b></p>
         <ul>
           <li><a href="https://www.58pic.com/newpic/32822139.html">义启粗楷体拼音版 =>簡体字</a></li>
           <li><a href="http://www.zitixiazai.org/huawenzitixiazai/2289.html">华文楷体 =>日文</a></li>
@@ -248,7 +249,7 @@ Close()
         </ul>
         {/* AR StdKaiSHYL1 Md = 1465803963432.TTC */}
         <p>
-          これみつからん、、、これがあれば全部無料なんだけど、、、 -->
+          このフォントが見つからない. これがあれば全部無料なんだけど...　 -->
           <a href="https://www.fontke.com/family/1386721/">方正楷体繁体拼音体</a>
         </p>
         <Code
@@ -258,8 +259,8 @@ Close()
 
         <p>&nbsp;</p>
         <h1>黑体（角ゴシック体）</h1>
-        <p><img class="font-img" src="./images/font_sample2.png" alt="中黑拼音体+源真ゴシック+AR HeiSHYL1 Bd (文鼎拼音字型)" /></p>
-        <p>有料フォントがあるので年間1900円</p>
+        <p><img class="font-img" src="./images/font_sample3.png" alt="中黑拼音体+源真ゴシック+AR HeiSHYL1 Bd (文鼎拼音字型)" /></p>
+        <p>太さ違うけど、これが一番近い。<b>有料フォントがあるので250円+年間1900円</b></p>
         <ul>
           <li><a href="https://en.fontke.com/font/26549102/">中黑拼音体 =>簡体字</a></li>
           <li><a href="http://jikasei.me/font/genshin/">源真ゴシック =>日文 </a></li>
@@ -296,6 +297,14 @@ Close()
         <h1>注音符号</h1>
         <ul>
           <li><a href="https://booth.pm/ja/items/1117555">注音符号 自動ルビ振りフォント</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820935.html">王汉宗中楷体注音</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820939.html">王汉宗中楷破音一</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820943.html">王汉宗中楷体破音二</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820945.html">王汉宗中楷体破音三</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820933.html">王汉宗中明体注音</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820937.html">王汉宗中明体破音一</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820941.html">王汉宗中明体破音二</a></li>
+          <li><a href="https://www.58pic.com/newpic/32820944.html">王汉宗中明体破音三</a></li>
         </ul>
 
       </div>

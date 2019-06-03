@@ -10,6 +10,7 @@ const Header = () => (
       <ul>
         <li><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
         <li><Link to="/recommendation/" activeClassName="is-active">Recommended combination for Japanese</Link></li>
+        <li><Link to="/applyFont/" activeClassName="is-active">How to apply font with Android</Link></li>
       </ul>
     </nav>
   </header>
