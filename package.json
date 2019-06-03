@@ -92,6 +92,7 @@
     "inline-style-prefixer": "^3.0.6",
     "invariant": "^2.2.2",
     "prop-types": "^15.5.10",
+    "react-code-prettify": "0.0.1",
     "react-sizeme": "^2.2.0",
     "react-transition-group": "^1.2.0",
     "shallowequal": "^1.0.1"
