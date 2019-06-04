@@ -52,45 +52,48 @@ export default class Recommendation extends Component {
       <div className="page">
         <h1>Androidにフォントを適応させる</h1>
         <p>Androidのバージョンは8.0.1 root化済み Nexus 6P</p>
-        <p>合成したAa拜拜生僻字 を英字フォントに設定するとなぜか一部文字が豆腐になりました。そのため、英字フォントは別のものを設定する必要があります。
-        <a href="https://fonts.google.com/specimen/Mali?selection.family=Caveat"> <u>Mali</u> </a> が無料で書体の感じも近く、スタイルが多いので良い感じです。<br />
-        しかし、このままではロック画面上のコロンが表示されないので、以下の記事に基づいてfontforgeで編集する必要があります。</p>
+        <p>合成したAa拜拜生僻字 を英字フォントに設定するとなぜか一部文字が豆腐になりました．そのため，英字フォントは別のものを設定する必要があります．
+        <a href="https://fonts.google.com/specimen/Mali?selection.family=Caveat"> <u>Mali</u> </a> が無料で書体の感じも近く，スタイルが多いので良い感じです．<br />
+        しかし，このままではロック画面上のコロンが表示されないので，以下の記事に基づいてfontforgeで編集する必要があります．</p>
 
         <ul>
           <li><a href="https://androplus.org/Entry/5597/">AndroidでRobotoフォントを置換するとロック画面のコロンが豆腐になる原因</a></li>
         </ul>
 
         <p>&nbsp;</p>
-        <p>フォントの適応方法は以下の記事を参考にしてください。</p>
+        <p>フォントの適応方法は以下の記事を参考にしてください．</p>
         <ul>
           <li><a href="https://androidlover.net/android-marshallow-change-font">Android 6.0 Marshmallowのフォント変更方法【要root】</a></li>
         </ul>
 
-        <p>合成したaabaibaishengpizi.ttf ，Mali フォントのファミリーを /system/fonts/ に入れてパーミッション変えて、/system/etc/fonts.xml を編集します。</p>
+        <p>
+          合成したフォントを aabaibaishengpizi.ttf とリネームして， Mali フォントのファミリーと共に /system/fonts/ に入れてパーミッション変えます．そして /system/etc/fonts.xml を以下のように編集します．<br />
+          スクリーンショットは適用後のものです．
+        </p>
 
 
-        <p>中国語・日本語の設定</p>
+        <h2>中国語・日本語の設定</h2>
         <Code
           codeString={codeCJ}
           language="xml"
          />
-       <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848816/picture_pc_8e3590a351b6b4f0bfa6055a20f9f838.png" alt="中国語・日本語の設定" width="60%"/>
+       <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848816/picture_pc_8e3590a351b6b4f0bfa6055a20f9f838.png" alt="中国語・日本語の設定" width="40%"/>
 
 
-        <p>web サイトとか基本的な英数字テキスト</p>
+        <h2>web サイトとか基本的な英数字テキスト</h2>
         <Code
           codeString={codeBasic}
           language="shell"
          />
-        <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848830/picture_pc_aeab0d7b4f713372a325425b8aa98928.png" alt="web サイトとか基本的な英数字テキスト" width="60%"/>
+       <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848830/picture_pc_aeab0d7b4f713372a325425b8aa98928.png" alt="web サイトとか基本的な英数字テキスト" width="40%"/>
 
-        <p>ランチャー上 のアプリ名とかステータスバー上のwifi名等</p>
+        <h2>ランチャー上 のアプリ名とかステータスバー上のwifi名等</h2>
         <Code
           codeString={codeLauncher}
           language="shell"
          />
-        <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848855/picture_pc_b9869f1071c0e6c1d0eee37cd77654e5.png" alt="ランチャー上 のアプリ名" width="60%"/>
-        <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848847/picture_pc_413de5eebd98eca565a2662094b4d0ef.png" alt="ステータスバー上のwifi名" width="60%"/>
+       <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848855/picture_pc_b9869f1071c0e6c1d0eee37cd77654e5.png" alt="ランチャー上 のアプリ名" width="40%"/>
+        <img class="font-img" src="https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/11848847/picture_pc_413de5eebd98eca565a2662094b4d0ef.png" alt="ステータスバー上のwifi名" width="40%"/>
 
       </div>
     );

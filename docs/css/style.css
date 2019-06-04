@@ -120,6 +120,7 @@ button:focus {
 /* Page */
 .page {
   width: 80%;
+  text-align: center;
   background: #EEEEEE;
   margin: auto;
   padding: 1em 2em;
@@ -128,18 +129,38 @@ button:focus {
 .page h1 {
   font-size: 40px;
 }
-
+.page h2 {
+  font-size: 30px;
+  text-align: left;
+}
+.page h3 {
+  font-size: 20px;
+  text-align: left;
+}
 .page p {
   font-size: 16px;
+  text-align: left;
 }
-
 .page ul {
   font-size: 16px;
   text-align: left;
 }
+.page ol {
+  font-size: 16px;
+  text-align: left;
+}
+.page Code {
+  text-align: left;
+}
+.page table{
+  text-align: left;
+}
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
 
-.page img {
-  text-align:center;
+table td {/*table内のtdに対して*/
+  padding: 0px 10px;/*上下3pxで左右10px*/
 }
 
 
