@@ -244,7 +244,7 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
         <ul>
           <li><a href="https://www.58pic.com/newpic/32822139.html">义启粗楷体拼音版 =>簡体字</a></li>
           <li><a href="http://www.zitixiazai.org/huawenzitixiazai/2289.html">华文楷体 =>日文</a></li>
-          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR StdKaiSHYL1 Md (文鼎拼音字型) => 繁体字</a></li>
+          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR StdKaiSHYL1 Md (文鼎拼音字型) => 繁体字 (年間1900円)</a></li>
         </ul>
         {/* AR StdKaiSHYL1 Md = 1465803963432.TTC */}
         <p>
@@ -261,9 +261,9 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
         <img class="font-img" src="./images/font_sample3.png" alt="中黑拼音体+源真ゴシック+AR HeiSHYL1 Bd (文鼎拼音字型)" />
         <p>太さ違うけど，これが一番近い．<b>有料フォントがあるので250円+年間1900円．</b> 購入方法は本ページ下部に記載.</p>
         <ul>
-          <li><a href="https://en.fontke.com/font/26549102/">中黑拼音体 =>簡体字</a></li>
+          <li><a href="https://en.fontke.com/font/26549102/">中黑拼音体 =>簡体字 (250円)</a></li>
           <li><a href="http://jikasei.me/font/genshin/">源真ゴシック =>日文 </a></li>
-          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR HeiSHYL1 Bd (文鼎拼音字型) => 繁体字</a></li>
+          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR HeiSHYL1 Bd (文鼎拼音字型) => 繁体字 (年間1900円)</a></li>
         </ul>
         {/* AR HeiSHYL1 Bd = 1465803465595.TTC  */}
         <Code
