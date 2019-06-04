@@ -21,8 +21,6 @@ azuki_s = "azuki_small.ttf"
 Open(azuki)
 # 範囲選択(ひらがな・カタカナ，漢字)
 Select(0u4E00, 0uFF9F, 0u3041, 0u30FE)
-# これは一つづつの指定できる
-# SelectAllInstancesOf(0u56E3, 0u56EE)
 # 文字の太さを考えると，これくらいが丁度いい
 Scale(80,75)
 Move(0, -110)
@@ -118,7 +116,6 @@ zhongHeiPinYinTi_small = "A033-中黑拼音体_small.ttf"
 # 源真ゴシック
 genShin  = "GenShinGothic-Monospace-Medium.ttf"
 
-
 # 中黑拼音体 の大きさを他のフォントと揃える
 # 1 はfstypeの設定(フィールドが変更を禁止)に無関係にフォントを操作する.
 Open(zhongHeiPinYinTi,1)
@@ -135,11 +132,11 @@ Close()
 
 # 足りないフォントを補完する
 Open(heiSHYL1,1)
-# # 合成する(空のグリフだけマージされる)
+# 合成する(空のグリフだけマージされる)
 MergeFonts(zhongHeiPinYinTi_small,1)
 MergeFonts(genShin,1)
 SetOS2Value("FSType", 0)
-# # 生成
+# 生成
 Generate(heiSHYL1:r + "-marge.ttf")
 Close()
 `
