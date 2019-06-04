@@ -1,177 +1,223 @@
-/* eslint-disable class-methods-use-this */
 /* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import StackGrid, { transitions, easings } from '../../../src/';
-import DemoControl from '../components/DemoControl';
+import jsonData from "../../json/pinyin-fonts.json";
+import TagsControl from '../components/TagsControl';
 
-const itemModifier = [
-  'pattern1',
-  'pattern2',
-  'pattern3',
-  'gray',
-  'gray-light',
-  'gray-dark',
-  'yellow',
-  'pink',
-  'purple',
-];
+const transition = transitions.scaleDown;
+
+// json からフォントの情報を取得する
+const ldtztw_fonts = jsonData.fonts.绿斗堂字体网;
+const qtw_fonts = jsonData.fonts.千图网;
+const ztxz_fonts = jsonData.fonts.字体下载;
+const ztjz_fonts = jsonData.fonts.字体视界;
+const zzw_fonts = jsonData.fonts.找字网;
+const etc_fonts = jsonData.fonts.etc;
+// 結合する
+const fonts = ldtztw_fonts.concat(qtw_fonts, ztxz_fonts, ztjz_fonts, zzw_fonts, etc_fonts);
+// console.log(fonts);
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
 
-    const items = [];
-
-    for (let i = 0; i < 10; i += 1) {
-      items.push(this.createItem());
-    }
-
-    this.state = {
-      items,
-      duration: 480,
-      columnWidth: 150,
-      gutter: 5,
-      easing: easings.quartOut,
-      transition: 'fadeDown',
-      rtl: false,
+    this.state={
+      fonts: fonts,
+      // bool型の配列っていいのかな、、、？
+      is_tags: { "free": true,
+              "charge": true,
+              "simplified_characters": true,
+              "traditional_characters": true,
+              "hiragana": true,
+              "elegant": true,
+              "cheerful": true,
+              "square_style": true,
+              "handwriting": true,
+              "beautiful": true,
+              "serious": true,
+              "cute": true,
+              "nostalgic": true,
+              "ming": true,
+              "gothic": true }
     };
   }
 
-  createItem() {
-    const id = Math.random().toString(36).substr(2, 9);
-    const height = Math.floor((Math.random() * (300 - 80)) + 80);
-    const modifier = itemModifier[Math.floor(Math.random() * itemModifier.length)];
 
-    return { id, height, modifier };
-  }
+  // ボタンが押されたときのコールバック
+  // OR 検索
+  orSearchItems = () => {
+    console.log("or button");
+    let matchedFonts = [];
 
-  shuffleItems = () => {
-    const newItems = [...this.state.items];
-    let i = newItems.length;
-
-    while (i) {
-      const j = Math.floor(Math.random() * i);
-      const t = newItems[--i]; // eslint-disable-line no-plusplus
-      newItems[i] = newItems[j];
-      newItems[j] = t;
-    }
-
-    this.setState({ items: newItems });
-  }
-
-  prependItem = () => {
-    this.setState({
-      items: [this.createItem(), ...this.state.items],
+    // チェックされているタグのリストを作成する
+    const is_checked_tags = Object.keys(this.state.is_tags).filter( (key) => {
+      return this.state.is_tags[key] === true
     });
-  }
 
-  appendItem = () => {
-    this.setState({
-      items: [...this.state.items, this.createItem()],
+    // 参考リンク
+    // JavaScript配列操作速度比較 -for vs each vs jQuery-
+    // https://qiita.com/yukiB/items/dd74cb8ebcfb5babe874
+    // 配列同士で重複する値があるか確認する
+    // https://www.dkrk-blog.net/javascript/duplicate_an_array
+    // filterで一致する要素があるか検索する。
+    fonts.forEach(font => {
+      // 検索条件 のタグのすべてが フォントの tags に含まれるとき
+      // 重複する要素を取り出す
+      const duplicate_tags = [...font["tags"], ...is_checked_tags].filter(item => font["tags"].includes(item) && is_checked_tags.includes(item));
+      if(duplicate_tags.length > 0){
+        console.log(font);
+        matchedFonts.push(font);
+      }
     });
+    this.setState({fonts: matchedFonts});
   }
+  // AND 検索
+  andSearchItems = () => {
+    console.log("and button");
+    let matchedFonts = [];
 
-  multipleAppendItem = () => {
-    const newItems = [];
-
-    for (let i = 0; i < 5; i += 1) {
-      newItems.push(this.createItem());
-    }
-
-    this.setState({
-      items: [...this.state.items, ...newItems],
+    // チェックされているタグのリストを作成する
+    const is_checked_tags = Object.keys(this.state.is_tags).filter( (key) => {
+      return this.state.is_tags[key] === true
     });
-  }
-
-  removeItem = (id) => {
-    this.setState({
-      items: this.state.items.filter(o => o.id !== id),
+    // AND 検索
+    fonts.forEach(font => {
+      // filterで一致する要素があるか検索する。
+      // 検索条件 のタグのすべてが フォントの tags に含まれるとき
+      // 重複する要素を取り出す。同じ値が2つずつ重複して出てくるので一意にする
+      const duplicate_tags = [...font["tags"], ...is_checked_tags].filter(item => font["tags"].includes(item) && is_checked_tags.includes(item));
+      if([...new Set(duplicate_tags)].length === is_checked_tags.length){
+        console.log(font);
+        matchedFonts.push(font);
+      }
     });
+    this.setState({fonts: matchedFonts});
   }
-
-  handleDurationChange = (duration) => {
-    this.setState({ duration });
+  // チェックボタンが選択されたときのコールバック
+  changedFreeItems = (checked) => {
+    // ネストになってるので、一度辞書ごと取り出して、要素を入れ替える。
+    let new_state = this.state.is_tags;
+    new_state.free = checked;
+    this.setState({is_tags: new_state});
   }
-
-  handleColumnWidthChange = (columnWidth) => {
-    this.setState({ columnWidth });
+  changedChargeItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.charge = checked;
+    this.setState({is_tags: new_state});
   }
-
-  handleGutterChange = (gutter) => {
-    this.setState({ gutter });
+  changedSimplifiedCharactersItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.simplified_characters = checked;
+    this.setState({is_tags: new_state});
   }
-
-  handleEasingChange = (easing) => {
-    this.setState({ easing });
+  changedTraditionalCharactersItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.traditional_characters = checked;
+    this.setState({is_tags: new_state});
   }
-
-  handleTransitionChange = (transition) => {
-    this.setState({ transition });
+  changedHiraganaItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.hiragana = checked;
+    this.setState({is_tags: new_state});
   }
-
-  handleRTLChange = (rtl) => {
-    this.setState({ rtl });
+  changedElegantItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.elegant = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedCheerfulItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.cheerful = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedSquareStyleItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.square_style = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedHandwritingItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.handwriting = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedBeautifulItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.beautiful = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedSeriousItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.serious = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedCuteItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.cute = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedNostalgicItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.nostalgic = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedMingItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.ming = checked;
+    this.setState({is_tags: new_state});
+  }
+  changedGothicItems = (checked) => {
+    let new_state = this.state.is_tags;
+    new_state.gothic = checked;
+    this.setState({is_tags: new_state});
   }
 
   render() {
-    const {
-      items,
-      duration,
-      columnWidth,
-      gutter,
-      easing,
-      transition: transitionSelect,
-      rtl,
-    } = this.state;
-
-    const transition = transitions[transitionSelect];
     return (
       <div>
-        <DemoControl
-          duration={duration}
-          columnWidth={columnWidth}
-          gutter={gutter}
-          easing={easing}
-          transition={transition}
-          rtl={rtl}
-          onShuffle={this.shuffleItems}
-          onPrepend={this.prependItem}
-          onAppend={this.appendItem}
-          onMultipleAppend={this.multipleAppendItem}
-          onDurationChange={this.handleDurationChange}
-          onColumnWidthChange={this.handleColumnWidthChange}
-          onGutterChange={this.handleGutterChange}
-          onEasingChange={this.handleEasingChange}
-          onTransitionChange={this.handleTransitionChange}
-          onRTLChange={this.handleRTLChange}
+        <TagsControl
+          onOrSearch={this.orSearchItems}
+          onAndSearch={this.andSearchItems}
+          onFreeChange={this.changedFreeItems}
+          onChargeChange={this.changedChargeItems}
+          onSimplifiedCharactersChange={this.changedSimplifiedCharactersItems}
+          onTraditionalCharactersChange={this.changedTraditionalCharactersItems}
+          onHiraganaChange={this.changedHiraganaItems}
+          onElegantChange={this.changedElegantItems}
+          onCheerfulChange={this.changedCheerfulItems}
+          onSquareStyleChange={this.changedSquareStyleItems}
+          onHandwritingChange={this.changedHandwritingItems}
+          onBeautifulChange={this.changedBeautifulItems}
+          onSeriousChange={this.changedSeriousItems}
+          onCuteChange={this.changedCuteItems}
+          onNostalgicChange={this.changedNostalgicItems}
+          onMingChange={this.changedMingItems}
+          onGothicChange={this.changedGothicItems}
         />
-
         <StackGrid
-          duration={duration}
-          columnWidth={columnWidth}
-          gutterWidth={gutter}
-          gutterHeight={gutter}
-          easing={easing}
+          monitorImagesLoaded
+          columnWidth={300}
+          duration={600}
+          gutterWidth={15}
+          gutterHeight={15}
+          easing={easings.cubicOut}
+          appearDelay={60}
           appear={transition.appear}
           appeared={transition.appeared}
           enter={transition.enter}
           entered={transition.entered}
           leaved={transition.leaved}
-          rtl={rtl}
-          onLayout={() => {
-            console.log('[DEMO] `onLayout()` has been called.'); // eslint-disable-line
-          }}
         >
-          {items.map(item =>
-            (<div
-              key={item.id}
-              className={`item item--${item.modifier}`}
-              style={{ height: item.height }}
-              onClick={() => this.removeItem(item.id)}
-            />)
-          )}
+          {this.state.fonts.map(obj => (
+            <figure
+              key={"./images/" + obj.src}
+              className="image"
+            >
+              <a href={obj.url}>
+                <img src={"./images/" + obj.src} alt={obj.name}/>
+              </a>
+              <figcaption>{obj.name}</figcaption>
+            </figure>
+          ))}
         </StackGrid>
       </div>
     );

@@ -6,14 +6,11 @@ import { IndexLink, Link } from 'react-router';
 
 const Header = () => (
   <header className="header">
-    <h1><img src="./images/logo.png" alt="React Stack Grid" /></h1>
     <nav>
       <ul>
         <li><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
-        <li><Link to="/horizontal/" activeClassName="is-active">Horizontal</Link></li>
-        <li><Link to="/change-size/" activeClassName="is-active">Change Size</Link></li>
-        <li><Link to="/real-world/" activeClassName="is-active">Real World</Link></li>
-        <li><a href="https://github.com/tsuyoshiwada/react-stack-grid">GitHub</a></li>
+        <li><Link to="/recommendation/" activeClassName="is-active">Recommended combination for Japanese</Link></li>
+        <li><Link to="/applyFont/" activeClassName="is-active">How to apply font with Android</Link></li>
       </ul>
     </nav>
   </header>

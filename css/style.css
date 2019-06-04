@@ -96,7 +96,7 @@ button:focus {
 .header nav {
   position: fixed;
   top: 30px;
-  left: 210px;
+  left: 0px;
   z-index: 1000;
 }
 
@@ -115,6 +115,52 @@ button:focus {
 
 .header .is-active {
   color: #ecc60b;
+}
+
+/* Page */
+.page {
+  width: 80%;
+  text-align: center;
+  background: #EEEEEE;
+  margin: auto;
+  padding: 1em 2em;
+}
+
+.page h1 {
+  font-size: 40px;
+}
+.page h2 {
+  font-size: 30px;
+  text-align: left;
+}
+.page h3 {
+  font-size: 20px;
+  text-align: left;
+}
+.page p {
+  font-size: 16px;
+  text-align: left;
+}
+.page ul {
+  font-size: 16px;
+  text-align: left;
+}
+.page ol {
+  font-size: 16px;
+  text-align: left;
+}
+.page Code {
+  text-align: left;
+}
+.page table{
+  text-align: left;
+}
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
+
+table td {/*table内のtdに対して*/
+  padding: 0px 10px;/*上下3pxで左右10px*/
 }
 
 
@@ -142,6 +188,40 @@ button:focus {
   color: #fff;
 }
 
+/* Tags control */
+.tags-control {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling : touch;
+  background: #ebc60b;
+  color: #fff;
+}
+
+.tags-control > div {
+  padding-right: 15px;
+}
+
+.tags-control label {
+  display: block;;
+  font-size: 12px;
+}
+
+.tags-control .btn {
+  font-size: 12px;
+}
+
+.tags-control select {
+  display: block;
+  min-width: 140px;
+  height: 35px;
+}
 
 /* Demo control */
 .demo-control {
@@ -239,14 +319,22 @@ button:focus {
 /* Image */
 .image {
   display: block;
+  width:		100%;
   margin: 0;
 }
-
+/* https://blog.raizzenet.com/show-text-on-top-of-the-image/ */
 .image figcaption {
-  display: block;
-  margin: .2em 0 0;
-  font-weight: normal;
+  width:		100%;
+	font-size:	100%;
+	text-align:	center;
+	bottom:		4;
+	margin:		0;
+	padding:	0;
+	color:		#fff;
+	background:	rgba(0,0,0,0.4); /* 帯の透明度 */
+	position:	absolute; /* 絶対位置指定 */
 }
+
 
 
 @media (max-width: 580px) {
