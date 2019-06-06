@@ -100,6 +100,9 @@ MergeFonts(huaWenKaiTi,1)
 SelectChanged()
 # 华文楷体 の位置を他のフォントと揃える
 Move(0, 100)
+# 句読点を下げる
+SelectAllInstancesOf(0u3001, 0u3002)
+Move(0, -350)
 # 生成
 Generate(stdKaiSHYL1:r + "-marge.ttf")
 Close()
@@ -135,6 +138,9 @@ Open(heiSHYL1,1)
 # 合成する(空のグリフだけマージされる)
 MergeFonts(zhongHeiPinYinTi_small,1)
 MergeFonts(genShin,1)
+# 句読点を下げる
+SelectAllInstancesOf(0u3001, 0u3002)
+Move(0, -350)
 SetOS2Value("FSType", 0)
 # 生成
 Generate(heiSHYL1:r + "-marge.ttf")
@@ -521,7 +527,6 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
             <h3>3.フォントをダウンロードする</h3>
               <p>購入した Zicoin を使ってフォントをダウンロードすることができます．</p>
               <img class="font-img" src="./images/how2purchase/fonke_download.png" alt="download" width="60%"/>
-
       </div>
     );
   }

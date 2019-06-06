@@ -91,11 +91,11 @@ export default class TagsControl extends Component {
           <input type="checkbox" checked={charge} onClick={this.handleChargeChange} defaultChecked/>
         </div>
         <div>
-          <label>簡体字</label>
+          <label>簡体</label>
           <input type="checkbox" checked={simplified_characters} onClick={this.handleSimplifiedCharactersChange} defaultChecked/>
         </div>
         <div>
-          <label>繁体字</label>
+          <label>繁体</label>
           <input type="checkbox" checked={traditional_characters} onClick={this.handleTraditionalCharactersChange} defaultChecked/>
         </div>
         <div>
@@ -103,7 +103,7 @@ export default class TagsControl extends Component {
           <input type="checkbox" checked={hiragana} onClick={this.handleHiraganaChange} defaultChecked/>
         </div>
         <div>
-          <label>エレガント</label>
+          <label>優雅</label>
           <input type="checkbox" checked={elegant} onClick={this.handleEleganteChange} defaultChecked/>
         </div>
         <div>
@@ -119,7 +119,7 @@ export default class TagsControl extends Component {
           <input type="checkbox" checked={handwriting} onClick={this.handleHandwritingChange} defaultChecked/>
         </div>
         <div>
-          <label>きれい</label>
+          <label>綺麗</label>
           <input type="checkbox" checked={beautiful} onClick={this.handleBeautifulChange} defaultChecked/>
         </div>
         <div>
@@ -131,7 +131,7 @@ export default class TagsControl extends Component {
           <input type="checkbox" checked={cute} onClick={this.handleCuteChange} defaultChecked/>
         </div>
         <div>
-          <label>むかしっぽい</label>
+          <label>古風</label>
           <input type="checkbox" checked={nostalgic} onClick={this.handleNostalgicChange} defaultChecked/>
         </div>
         <div>
@@ -139,7 +139,7 @@ export default class TagsControl extends Component {
           <input type="checkbox" checked={ming} onClick={this.handleMingChange} defaultChecked/>
         </div>
         <div>
-          <label>ゴシック</label>
+          <label>黑体</label>
           <input type="checkbox" checked={gothic} onClick={this.handleGothicChange} defaultChecked/>
         </div>
 
