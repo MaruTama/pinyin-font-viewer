@@ -296,6 +296,8 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
         <h1>面白いフォント</h1>
         <ul>
           <li><a href="https://nukosuki.booth.pm/items/134190">略字フォント</a></li>
+          <li><a href="https://nukosuki.booth.pm/items/41864">略字フォントver.1.13</a></li>
+          <li><a href="https://nukosuki.booth.pm/items/555270">よくみる？変体仮名ゴシック</a></li>
         </ul>
 
         <p>&nbsp;</p>
