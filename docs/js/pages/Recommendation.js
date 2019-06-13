@@ -246,11 +246,12 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
         <p>&nbsp;</p>
         <h1>楷体（明朝系）</h1>
         <img class="font-img" src="./images/font_sample2.png" alt="义启粗楷体拼音版+华文楷体+AR StdKaiSHYL1 Md (文鼎拼音字型)" />
-        <p>ピンインの雰囲気違うけど，これが一番近い．<b>有料フォントがあるので年間1900円．</b> 購入方法は本ページ下部に記載.</p>
+        <p>ピンインの雰囲気違うけど，これが一番近い．<b>有料フォントがあるので年間1900台湾元(約6500円)．</b> 購入方法は本ページ下部に記載.</p>
+        <p><b>※拼音が間違っているものがあります．本ページ下部に詳細を記載．</b></p>
         <ul>
           <li><a href="https://www.58pic.com/newpic/32822139.html">义启粗楷体拼音版 =>簡体字</a></li>
           <li><a href="http://www.zitixiazai.org/huawenzitixiazai/2289.html">华文楷体 =>日文</a></li>
-          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR StdKaiSHYL1 Md (文鼎拼音字型) => 繁体字 (年間1900円)</a></li>
+          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR StdKaiSHYL1 Md (文鼎拼音字型) => 繁体字 (年間1900台湾元(約6500円))</a></li>
         </ul>
         {/* AR StdKaiSHYL1 Md = 1465803963432.TTC */}
         <p>
@@ -265,11 +266,12 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
         <p>&nbsp;</p>
         <h1>黑体（角ゴシック体）</h1>
         <img class="font-img" src="./images/font_sample3.png" alt="中黑拼音体+源真ゴシック+AR HeiSHYL1 Bd (文鼎拼音字型)" />
-        <p>太さ違うけど，これが一番近い．<b>有料フォントがあるので250円+年間1900円．</b> 購入方法は本ページ下部に記載.</p>
+        <p>太さ違うけど，これが一番近い．<b>有料フォントがあるので250円+年間1900台湾元(約6500円)．</b> 購入方法は本ページ下部に記載.</p>
+        <p><b>※拼音が間違っているものがあります．本ページ下部に詳細を記載．</b></p>
         <ul>
           <li><a href="https://en.fontke.com/font/26549102/">中黑拼音体 =>簡体字 (250円)</a></li>
           <li><a href="http://jikasei.me/font/genshin/">源真ゴシック =>日文 </a></li>
-          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR HeiSHYL1 Bd (文鼎拼音字型) => 繁体字 (年間1900円)</a></li>
+          <li><a href="https://ifontcloud.com/index/font_intro.jsp#!?family_font_id=1551947491918&searchWord=%E6%8B%BC%E9%9F%B3">AR HeiSHYL1 Bd (文鼎拼音字型) => 繁体字 (年間1900台湾元(約6500円))</a></li>
         </ul>
         {/* AR HeiSHYL1 Bd = 1465803465595.TTC  */}
         <Code
@@ -506,6 +508,361 @@ const fontPath = `/private/var/folders/jq/trd043d92y7gcc6c1wfpqy0c0000gn/T/Cloud
                   <td>1465875997680.TTC</td>
                   <td>文鼎中楷下汉语拼音L1：文鼎中楷下汉语拼音L6</td>
                   <td>簡体字・明朝体・小文字・下付き</td>
+                </tr>
+              </table>
+
+              <p>&nbsp;</p>
+              <p>拼音が間違っている文字(確認したもの,明朝系と黑体は同じ間違い)</p>
+              <table border="1">
+                <tr>
+                  <th>漢字</th>
+                  <th>表示される拼音</th>
+                  <th>正しい拼音</th>
+                  <th>Unicode</th>
+                  <th>備考</th>
+                </tr>
+                <tr>
+                  <td>癌</td>
+                  <td>yán</td>
+                  <td>ái</td>
+                  <td>u764c</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>扒</td>
+                  <td>pá</td>
+                  <td>bā</td>
+                  <td>u6252</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>剥</td>
+                  <td>bō</td>
+                  <td>bāo/bō</td>
+                  <td>u5265</td>
+                  <td>bō はgoogle入力だと出てこない</td>
+                </tr>
+                <tr>
+                  <td>朝</td>
+                  <td>zhāo</td>
+                  <td>cháo/zhāo</td>
+                  <td>u671d</td>
+                  <td>zhāo はgoogle入力だと出てこない</td>
+                </tr>
+                <tr>
+                  <td>抻</td>
+                  <td>shèn</td>
+                  <td>chēn</td>
+                  <td>u62bb</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>泵</td>
+                  <td>liú</td>
+                  <td>bèng</td>
+                  <td>u6cf5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>蚕</td>
+                  <td>tiǎn</td>
+                  <td>cán</td>
+                  <td>u8695</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>茬</td>
+                  <td>chí</td>
+                  <td>chá</td>
+                  <td>u832c</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>厂</td>
+                  <td>hǎn</td>
+                  <td>chǎng</td>
+                  <td>u5382</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>呲</td>
+                  <td>yí</td>
+                  <td>cī</td>
+                  <td>u5472</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>汆</td>
+                  <td>tǔn</td>
+                  <td>cuān</td>
+                  <td>u6c46</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>駔</td>
+                  <td>zǎng</td>
+                  <td>zù</td>
+                  <td>u99d4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>吨</td>
+                  <td>tún</td>
+                  <td>dūn</td>
+                  <td>u5428</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>炖</td>
+                  <td>tūn</td>
+                  <td>dùn</td>
+                  <td>u7096</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>欸</td>
+                  <td>ǎi</td>
+                  <td>ě</td>
+                  <td>u6b38</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>儿</td>
+                  <td>rén</td>
+                  <td>ér</td>
+                  <td>u513f</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>还</td>
+                  <td>huán</td>
+                  <td>hái/huán</td>
+                  <td>u8fd8</td>
+                  <td>还是(hái shì)のイメージ</td>
+                </tr>
+                <tr>
+                  <td>蚝</td>
+                  <td>cì</td>
+                  <td>háo</td>
+                  <td>u869d</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>坏</td>
+                  <td>péi</td>
+                  <td>huài</td>
+                  <td>u574f</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>茧</td>
+                  <td>chóng</td>
+                  <td>jiǎn</td>
+                  <td>u8327</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>扛</td>
+                  <td>gāng</td>
+                  <td>káng/gāng</td>
+                  <td>u625b</td>
+                  <td>gāng はgoogle入力だと出てこない</td>
+                </tr>
+                <tr>
+                  <td>挎</td>
+                  <td>kū</td>
+                  <td>kuà</td>
+                  <td>u630e</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>捋</td>
+                  <td>lè</td>
+                  <td>luō/lǚ</td>
+                  <td>u634b</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>孬</td>
+                  <td>huài</td>
+                  <td>nāo</td>
+                  <td>u5b6c</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>恁</td>
+                  <td>rèn</td>
+                  <td>nèn/nín</td>
+                  <td>u6041</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>嚄</td>
+                  <td>huò</td>
+                  <td>wò</td>
+                  <td>u5684</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>噢</td>
+                  <td>òu</td>
+                  <td>ō</td>
+                  <td>u5662</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>畦</td>
+                  <td>xī</td>
+                  <td>qí</td>
+                  <td>u7566</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>沏</td>
+                  <td>qū</td>
+                  <td>qī</td>
+                  <td>u6c8f</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>怯</td>
+                  <td>què</td>
+                  <td>qiè</td>
+                  <td>u602f</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>扰</td>
+                  <td>yòu</td>
+                  <td>rǎo</td>
+                  <td>u6270</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>熵</td>
+                  <td>dī</td>
+                  <td>shāng</td>
+                  <td>u71b5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>甚</td>
+                  <td>shé</td>
+                  <td>shèn</td>
+                  <td>u751a</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>胜</td>
+                  <td>xīng</td>
+                  <td>shèng</td>
+                  <td>u80dc</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>熟</td>
+                  <td>shóu</td>
+                  <td>shú</td>
+                  <td>u719f</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>嗍</td>
+                  <td>shuò</td>
+                  <td>suō</td>
+                  <td>u55cd</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>羧</td>
+                  <td>zuī</td>
+                  <td>suō</td>
+                  <td>u7fa7</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>体</td>
+                  <td>bèn</td>
+                  <td>tǐ</td>
+                  <td>u4f53</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>柁</td>
+                  <td>duō</td>
+                  <td>tuó</td>
+                  <td>u67c1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>硪</td>
+                  <td>é</td>
+                  <td>wò</td>
+                  <td>u786a</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>圩</td>
+                  <td>yú</td>
+                  <td>wéi/xū</td>
+                  <td>u5729</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>腌</td>
+                  <td>āng</td>
+                  <td>yān</td>
+                  <td>u814c</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>掖</td>
+                  <td>yì</td>
+                  <td>yē/yè</td>
+                  <td>u6396</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>咋</td>
+                  <td>zhà</td>
+                  <td>zǎ</td>
+                  <td>u548b</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>筩</td>
+                  <td>tǒng</td>
+                  <td>yǒng</td>
+                  <td>u7b69</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>奓</td>
+                  <td>shē</td>
+                  <td>zhà</td>
+                  <td>u5953</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>着</td>
+                  <td>zhuó</td>
+                  <td>zhe/zhuó</td>
+                  <td>u7740</td>
+                  <td>zhe こっちのイメージ</td>
+                </tr>
+                <tr>
+                  <td>种</td>
+                  <td>chóng</td>
+                  <td>zhòng/zhǒng</td>
+                  <td>u79cd</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>幢</td>
+                  <td>chuáng</td>
+                  <td>zhuáng</td>
+                  <td>u5e62</td>
+                  <td></td>
                 </tr>
               </table>
 
